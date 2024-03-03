@@ -13,12 +13,25 @@ function TaskInput ({ handleTask }) {
 
   const addTaskToList = () => {
     handleTask(inputValue);
+    setInputValue('');
+  }
+
+  const addTaskWithEnterKey = (event) => {
+    if(event.key === 'Enter') {
+      handleTask(inputValue);
+      setInputValue('');
+    }
   }
 
   return (
     <>
       <div className="input-wrap">
-        <input type="text" onChange={HandleInputChange} required autoFocus/>
+        <input 
+          type="text" 
+          onKeyUp={addTaskWithEnterKey} 
+          onChange={HandleInputChange} 
+          value={inputValue}
+          required autoFocus/>
         <button onClick={addTaskToList}>Aggiungi</button>
       </div>
 

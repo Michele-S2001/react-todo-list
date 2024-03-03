@@ -7,7 +7,8 @@ function App() {
   const [myTasks, setMyTaks] = useState([]);
 
   const AddTask = (task) => {
-    console.log('Ho tentato di aggiungere', task);
+    const newTasks = [...myTasks, task];
+    setMyTaks(newTasks);
   }
 
   return (
