@@ -11,15 +11,27 @@ function TaskInput ({ handleTask }) {
     setInputValue(event.target.value);
   }
 
+  //TODO: Completare validazione con messaggio di errore ed eventualmente creare una funzione per i controlli per non ripetersi
+
   const addTaskToList = () => {
-    handleTask(inputValue);
-    setInputValue('');
+    const task = inputValue.trim();
+    if(!(task.length === 0) && task.length > 3) {
+      handleTask(inputValue);
+      setInputValue('');
+    } else {
+      console.log('task non valida')
+    }
   }
 
   const addTaskWithEnterKey = (event) => {
     if(event.key === 'Enter') {
-      handleTask(inputValue);
-      setInputValue('');
+      const task = inputValue.trim();
+      if(!(task.length === 0) && task.length > 3) {
+        handleTask(inputValue);
+        setInputValue('');
+      } else {
+        console.log('task non valida')
+      }
     }
   }
 
