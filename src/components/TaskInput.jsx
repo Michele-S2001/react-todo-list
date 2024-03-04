@@ -14,24 +14,22 @@ function TaskInput ({ handleTask }) {
   //TODO: Completare validazione con messaggio di errore ed eventualmente creare una funzione per i controlli per non ripetersi
 
   const addTaskToList = () => {
-    const task = inputValue.trim();
-    if(!(task.length === 0) && task.length > 3) {
-      handleTask(inputValue);
-      setInputValue('');
-    } else {
-      console.log('task non valida')
-    }
+    verifyInputValue(inputValue);
   }
 
   const addTaskWithEnterKey = (event) => {
     if(event.key === 'Enter') {
-      const task = inputValue.trim();
-      if(!(task.length === 0) && task.length > 3) {
-        handleTask(inputValue);
-        setInputValue('');
-      } else {
-        console.log('task non valida')
-      }
+      verifyInputValue(inputValue);
+    }
+  }
+
+  const verifyInputValue = (taskText) => {
+    const task = taskText.trim();
+    if(!(task.length === 0) && task.length > 3) {
+      handleTask(task);
+      setInputValue('');
+    } else {
+      console.log('task non accettata');
     }
   }
 
