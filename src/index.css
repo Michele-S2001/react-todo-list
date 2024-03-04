@@ -12,3 +12,24 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input[type="text"] {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+ul, ol {
+  list-style: none;
+}

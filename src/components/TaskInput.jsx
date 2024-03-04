@@ -42,12 +42,13 @@ function TaskInput ({ handleTask }) {
     <>
       <div className="input-wrap">
         <input 
+          className="text-field"
           type="text" 
           onKeyUp={addTaskWithEnterKey} 
           onChange={HandleInputChange} 
           value={inputValue}
           required autoFocus/>
-        <button onClick={addTaskToList}>Aggiungi</button>
+        <button className="add-btn" onClick={addTaskToList}>Aggiungi</button>
       </div>
       {messageError === false ? ('') : (
         <span className="errorMessage">

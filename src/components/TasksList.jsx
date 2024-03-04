@@ -8,11 +8,10 @@ function TasksList({ todos, deleteTask }) {
 
   return (
     <>
-      <h4>Le mie cose da fare</h4>
       <ul className="tasksList">
         {todos.length > 0 ? (todos.map((task, i) => (
-          <li key={i}> 
-            {task} 
+          <li className="current-task" key={i}> 
+            <p className="inner-text">{task}</p>
             <span className="deleteTask" onClick={() => handleTaskDeleting(task)}>cancella</span>
           </li>
         ))

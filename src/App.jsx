@@ -1,6 +1,7 @@
 import { useState } from "react"
 import TaskInput from "./components/TaskInput"
 import TasksList from "./components/TasksList"
+import './style.scss';
 
 function App() {
 
@@ -20,9 +21,11 @@ function App() {
 
   return (
     <>
-      <h2>La mia prima todo list in React</h2>
-      <TaskInput handleTask={AddTask} />
-      <TasksList todos={myTasks} deleteTask={DeleteTask} />
+      <h2 className="page-title">La mia prima todo list in React</h2>
+      <div className="content">
+        <TaskInput handleTask={AddTask} />
+        <TasksList todos={myTasks} deleteTask={DeleteTask} />
+      </div>
     </>
   )
 }
