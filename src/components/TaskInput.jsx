@@ -51,7 +51,7 @@ function TaskInput ({ handleTask }) {
       </div>
       {messageError === false ? ('') : (
         <span className="errorMessage">
-          Testo non valido o più corto di 3 caratteri
+          ⚠️ Testo non valido o più corto di 3 caratteri ⚠️
         </span>
       )}
     </>
