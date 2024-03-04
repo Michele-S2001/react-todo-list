@@ -11,11 +11,18 @@ function App() {
     setMyTasks(newTasks);
   }
 
+  const DeleteTask = (task) => {
+    const newTasks = myTasks.filter((el) => {
+      return !(el === task);
+    })
+    setMyTasks(newTasks);
+  }
+
   return (
     <>
       <h2>La mia prima todo list in React</h2>
       <TaskInput handleTask={AddTask} />
-      <TasksList todos={myTasks} />
+      <TasksList todos={myTasks} deleteTask={DeleteTask} />
     </>
   )
 }
