@@ -4,11 +4,11 @@ import TasksList from "./components/TasksList"
 
 function App() {
 
-  const [myTasks, setMyTaks] = useState([]);
+  const [myTasks, setMyTasks] = useState([]);
 
   const AddTask = (task) => {
     const newTasks = [...myTasks, task];
-    setMyTaks(newTasks);
+    setMyTasks(newTasks);
   }
 
   return (
