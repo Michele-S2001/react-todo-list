@@ -5,13 +5,11 @@ import { useState } from "react";
 function TaskInput ({ handleTask }) {
 
   const [inputValue, setInputValue] = useState('');
+  const [messageError, setMessageError] = useState(false);
 
-  //con questa funzione gestisco l'aggiornamento reattivo della mia variabile inputValue
   const HandleInputChange = (event) => {
     setInputValue(event.target.value);
   }
-
-  //TODO: Completare validazione con messaggio di errore ed eventualmente creare una funzione per i controlli per non ripetersi
 
   const addTaskToList = () => {
     verifyInputValue(inputValue);
@@ -29,8 +27,15 @@ function TaskInput ({ handleTask }) {
       handleTask(task);
       setInputValue('');
     } else {
-      console.log('task non accettata');
+      showMessageError();
     }
+  }
+
+  const showMessageError = () => {
+    setMessageError(true);
+    setTimeout(() => {
+      setMessageError(false);
+    }, 2500);
   }
 
   return (
@@ -44,7 +49,11 @@ function TaskInput ({ handleTask }) {
           required autoFocus/>
         <button onClick={addTaskToList}>Aggiungi</button>
       </div>
-
+      {messageError === false ? ('') : (
+        <span className="errorMessage">
+          Testo non valido o più corto di 3 caratteri
+        </span>
+      )}
     </>
   )
 }
