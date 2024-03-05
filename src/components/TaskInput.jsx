@@ -50,9 +50,9 @@ function TaskInput ({ handleTask }) {
           required autoFocus/>
         <button className="add-btn" onClick={addTaskToList}>Aggiungi</button>
       </div>
-      {messageError === false ? ('') : (
+      {!(messageError === false) && (
         <span className="errorMessage">
-          ⚠️ Testo non valido o più corto di 3 caratteri ⚠️
+          ⚠️ Testo non valido o più corto di 4 caratteri ⚠️
         </span>
       )}
     </>
