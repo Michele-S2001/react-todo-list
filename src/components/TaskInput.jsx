@@ -47,6 +47,7 @@ function TaskInput ({ handleTask }) {
           onKeyUp={addTaskWithEnterKey} 
           onChange={HandleInputChange} 
           value={inputValue}
+          placeholder="Inserisci qualcosa da fare..."
           required autoFocus/>
         <button className="add-btn" onClick={addTaskToList}>Aggiungi</button>
       </div>

@@ -1,10 +1,18 @@
 //Stile globale
 
-.page-title {
-  text-align: center;
-  font-size: clamp(26px, 5vw, 42px);
-  margin-bottom: 32px;
-  padding: 20px 10px;
+.title-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+
+  .page-title {
+    border-radius: 12% 88% 8% 92% / 87% 17% 83% 13%;
+    text-align: center;
+    font-size: clamp(26px, 5vw, 42px);
+    margin-bottom: 42px;
+    padding: 20px;
+    background-color: white;
+  }
 }
 
 .content {
@@ -27,6 +35,10 @@
       padding: 0 14px;
       font-size: 18px;
       min-width: 100px;
+      color: white;
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.479);
+      }
     }
 
     .add-btn {
@@ -39,9 +51,12 @@
       transition: 100ms ease-in;
       cursor: pointer;
 
+      &:hover {
+        background-color: #7fd0df;
+      }
+
       &:active {
-        background-color: #999999;
-        color: #f1f1f1;
+        transform: scale(0.9);
       }
     }
   }
@@ -50,7 +65,7 @@
     text-align: center;
     display: block;
     font-weight: bold;
-    color: rgb(231, 0, 0);
+    color: rgb(255, 0, 0);
     margin: 20px 0;
     font-size: 21px;
   }
@@ -60,13 +75,32 @@
     flex-direction: column;
     gap: 24px;
     font-size: 21px;
+    color: white;
+
+    .no-tasks {
+      text-align: center;
+      font-size: 21px;
+
+      img {
+        filter: invert(1);
+      }
+    }
 
     .current-task {
       display: flex;
       align-items: center;
+      user-select: none;
 
-      .inner-text::first-letter {
-        text-transform: uppercase;
+      .inner-text {
+        &.done {
+          text-decoration: line-through;
+          text-decoration-thickness: 6px;
+          text-decoration-color: #242424;
+        }
+
+        &::first-letter {
+          text-transform: uppercase;
+        }
       }
 
       span {

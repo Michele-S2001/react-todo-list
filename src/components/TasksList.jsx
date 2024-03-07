@@ -16,7 +16,10 @@ function TasksList({ todos, deleteTask }) {
           </li>
         ))
         ) : (
-          <p>Non ci sono cose da fare</p>
+          <li className="no-tasks">
+            <img src="./empty-box.png" alt="Niente da fare" />
+            <p>Sembra che tu non abbia nulla da fare 😒</p>
+          </li>
         )}
       </ul>
     </>

@@ -45,7 +45,9 @@ function App() {
 
   return (
     <>
-      <h2 className="page-title">La mia prima todo list in React</h2>
+      <div className="title-wrap">
+        <h2 className="page-title">TODO by React</h2>
+      </div>
       <div className="content">
         <TaskInput handleTask={AddTask} />
         <TasksList todos={myTasks} deleteTask={DeleteTask} />
