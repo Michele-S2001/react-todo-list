@@ -10,5 +10,5 @@ Questa è una semplice applicazione To-Do List sviluppata in React. Gli elementi
 - Persistenza dei dati tramite localStorage
 
 ## Tecnologie utilizzate
-- (https://react.dev/)[React] - Libreria per la creazione di interfacce utente
-- (https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)[localStorage] - API per la persistenza dei dati nel browser
+- (React)[https://react.dev/] - Libreria per la creazione di interfacce utente
+- (localStorage)[https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage] - API per la persistenza dei dati nel browser
