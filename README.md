@@ -1,8 +1,14 @@
-# React + Vite
+# TODO - LIST
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descrizione
+Questa è una semplice applicazione To-Do List sviluppata in React. Gli elementi della lista vengono salvati nel localStorage del browser, permettendo di mantenere i dati anche dopo la chiusura del browser.
 
-Currently, two official plugins are available:
+## Funzionalità 
+- Aggiungi nuovi elementi alla lista
+- Elimina elementi dalla lista
+- Controlli di validazione sull'input
+- Persistenza dei dati tramite localStorage
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologie utilizzate
+- (https://react.dev/)[React] - Libreria per la creazione di interfacce utente
+- (https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)[localStorage] - API per la persistenza dei dati nel browser
